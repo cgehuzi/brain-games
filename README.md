@@ -1,1 +1,1 @@
-# Brain games tool for command line
+# Brain Games for command line
