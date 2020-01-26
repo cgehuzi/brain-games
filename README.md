@@ -1,1 +1,1 @@
-# frontend-project-lvl1
+# Brain games tool for command line
