@@ -1,4 +1,4 @@
-name: Node CI
+name: build
 
 on:
   - push
@@ -19,11 +19,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: install package
+      - name: init package
         run: make install
 
       - name: publish package
-        run: make publish
+        run: make build
 
       - name: lint package
         run: make lint
