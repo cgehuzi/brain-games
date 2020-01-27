@@ -1,6 +1,7 @@
-name: install -> publish -> lint
+name: Node CI
 
-on: [push, pull_request]
+on:
+  - push
 
 jobs:
   build:
@@ -12,15 +13,20 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - name: Use Node.js ${{ matrix.node-version }}
+
+      - name: setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: install
+
+      - name: install package
         run: make install
-      - name: publish
+
+      - name: publish package
         run: make publish
-      - name: lint
+
+      - name: lint package
         run: make lint
+
         env:
           CI: true
