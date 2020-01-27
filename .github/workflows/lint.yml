@@ -21,8 +21,8 @@ jobs:
 
       - name: lint package
         run: |
-        make install
-        make lint
-        
-      env:
-        CI: true
+          make install
+          make lint
+
+        env:
+          CI: true
