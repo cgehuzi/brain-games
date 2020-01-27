@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import sayWelcome, { getUserName, sayHello } from '..';
-import gameEven from '../calc';
+import gameEven from '../brain-even';
 
 sayWelcome('Answer "yes" if the number is even, otherwise answer "no".\n');
 const userName = getUserName('May I have your name? ');
