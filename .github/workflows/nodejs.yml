@@ -18,6 +18,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: start ESLint
-      run: make lint
+      run: 
+        make install
+        make publish
+        make lint
       env:
         CI: true
