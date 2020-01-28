@@ -21,8 +21,8 @@ const gameCalc = () => {
   const randomIndex = _.random(0, expressions.length - 1);
   const expression = expressions[randomIndex];
   const expressionFunction = getExpressionFunction(expression);
-  const question = `${numberOne} ${expression} ${numberTwo}`;
 
+  const question = `${numberOne} ${expression} ${numberTwo}`;
   const correctAnswer = expressionFunction(numberOne, numberTwo);
   const userAnswer = requestAnswer(question);
 
