@@ -13,22 +13,32 @@ const sayHello = (user) => {
   console.log(`Hello, ${user}!`);
 };
 
-const sayWrong = (wrong, correct, user) => {
-  console.log(`'${wrong}' is wrong answer ;(. Correct answer was '${correct}'.\nLet's try again, ${user}!`);
-};
-
-const sayCorrect = () => {
-  console.log('Correct!');
-};
-
-const sayCongrats = (user) => {
-  console.log(`Congratulations, ${user}!`);
-};
-
 const requestAnswer = (question) => {
   const answer = readlineSync.question(`Question: ${question}\nYour answer: `);
   return answer;
 };
+
+const makeGame = (gameDesc, gameFunc, user, roundsCount = 3) => {
+  console.log(gameDesc);
+
+  for (let i = roundsCount; i > 0; i -= 1) {
+    const result = gameFunc(user);
+    if (result !== true) {
+      const [userAnswer, correctAnswer] = result;
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(`Let's try again, ${user}!`);
+      return false;
+    }
+
+    console.log('Correct!');
+  }
+
+  console.log(`Congratulations, ${user}!`);
+  return true;
+};
+
+/* Прежняя реализация (через рекурсию)
+=============================================================
 
 const makeGame = (gameFunction, user, stepCount = 3) => {
   if (stepCount === 0) {
@@ -48,10 +58,12 @@ const makeGame = (gameFunction, user, stepCount = 3) => {
   return makeGame(gameFunction, user, stepCount - 1);
 };
 
+============================================================= */
+
 export default () => {
   console.log('Welcome to the Brain Games!');
 };
 
 export {
-  showGameRules, getUserName, sayHello, sayWrong, sayCorrect, sayCongrats, requestAnswer, makeGame,
+  showGameRules, getUserName, sayHello, requestAnswer, makeGame,
 };

@@ -17,7 +17,7 @@ const getExpressionFunction = (expression) => {
 const gameCalc = () => {
   const expressions = ['+', '-', '*'];
   const numberOne = _.random(100);
-  const numberTwo = _.random(50);
+  const numberTwo = _.random(100);
   const randomIndex = _.random(0, expressions.length - 1);
   const expression = expressions[randomIndex];
   const expressionFunction = getExpressionFunction(expression);
