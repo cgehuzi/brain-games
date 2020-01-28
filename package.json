@@ -42,6 +42,7 @@
     "dist"
   ],
   "dependencies": {
+    "lodash": "^4.17.15",
     "readline-sync": "^1.4.10"
   }
 }
