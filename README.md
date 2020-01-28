@@ -29,3 +29,9 @@ Find the greatest common divisor of given numbers.
 What number is missing in the progression?
 
 [![Start Brain Progression](https://asciinema.org/a/gHR15h0clLLiHrDMoNG1hycgV.svg)](https://asciinema.org/a/gHR15h0clLLiHrDMoNG1hycgV)
+
+### Brain Prime game
+
+Answer "yes" if given number is prime. Otherwise answer "no".
+
+[![Start Brain Prime](https://asciinema.org/a/hJcox7gGw0S3BJMw1RrOVhl5a.svg)](https://asciinema.org/a/hJcox7gGw0S3BJMw1RrOVhl5a)
