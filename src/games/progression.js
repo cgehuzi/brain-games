@@ -2,8 +2,8 @@ import * as _ from 'lodash';
 import { requestAnswer } from '..';
 
 export default () => {
-  const progressionStart = _.random(10);
-  const progressionStep = _.random(10);
+  const progressionStart = _.random(1, 10);
+  const progressionStep = _.random(1, 10);
   const progressionLength = 10;
 
   const progression = [progressionStart];
@@ -13,8 +13,15 @@ export default () => {
     progression.push(progressionNext);
   }
 
+  const hideIndex = _.random(0, progressionLength - 1);
+  const correctAnswer = progression[hideIndex];
+  progression[hideIndex] = '..';
   const question = progression.join(' ');
   const userAnswer = requestAnswer(question);
 
-  return userAnswer;
+  if (correctAnswer !== Number(userAnswer)) {
+    return [userAnswer, correctAnswer];
+  }
+
+  return true;
 };

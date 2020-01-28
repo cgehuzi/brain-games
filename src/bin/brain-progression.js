@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 import startGame, { getUserName, sayHello, makeGame } from '..';
-import gameGCD from '../games/gcd';
+import gameProgression from '../games/progression';
 
 startGame();
 const userName = getUserName();
 sayHello(userName);
-makeGame('Find the greatest common divisor of given numbers.', gameGCD, userName);
+makeGame('What number is missing in the progression?', gameProgression, userName);

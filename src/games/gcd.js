@@ -2,8 +2,8 @@ import * as _ from 'lodash';
 import { requestAnswer } from '..';
 
 export default () => {
-  const numberOne = _.random(100);
-  const numberTwo = _.random(100);
+  const numberOne = _.random(1, 100);
+  const numberTwo = _.random(1, 100);
 
   const minNumber = Math.min(numberOne, numberTwo);
   let grandDivisor = minNumber;
