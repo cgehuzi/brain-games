@@ -4,4 +4,6 @@
 
 ## Getting started
 
-[![asciicast](https://asciinema.org/a/8tNFG9MWIUW9OG8vMi9v850de.svg)](https://asciinema.org/a/8tNFG9MWIUW9OG8vMi9v850de)
+### Install Brain Games
+
+[![asciicast](https://asciinema.org/a/58In28w1MkuXyxg1PDEy6xjkN.svg)](https://asciinema.org/a/58In28w1MkuXyxg1PDEy6xjkN)
