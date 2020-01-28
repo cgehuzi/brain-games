@@ -4,34 +4,36 @@
 
 ## Getting started
 
-[![Install Brain Games](https://asciinema.org/a/58In28w1MkuXyxg1PDEy6xjkN.svg)](https://asciinema.org/a/58In28w1MkuXyxg1PDEy6xjkN)
+Install Brain Games
 
-### Brain Even game
+[![Install Brain Games](https://asciinema.org/a/xnVNYtgO2FtRlv5oBFrx9bbNA.svg)](https://asciinema.org/a/xnVNYtgO2FtRlv5oBFrx9bbNA)
+
+### Start Brain Even game
 
 Answer "yes" if the number is even, otherwise answer "no".
 
-[![Start Brain Even](https://asciinema.org/a/pqw3cTPpraRJ5bLSmDojV9Mi5.svg)](https://asciinema.org/a/pqw3cTPpraRJ5bLSmDojV9Mi5)
+[![Start Brain Even game](https://asciinema.org/a/3gxTMgyghmY2OQC9rbzWYK29J.svg)](https://asciinema.org/a/3gxTMgyghmY2OQC9rbzWYK29J)
 
-### Brain Calc game
+### Start Brain Calc game
 
 What is the result of the expression?
 
-[![Start Brain Calc](https://asciinema.org/a/slNDWlw5lQKBtDqYdcczjU02J.svg)](https://asciinema.org/a/slNDWlw5lQKBtDqYdcczjU02J)
+[![Start Brain Calc game](https://asciinema.org/a/zLoB2E0NQJy2D6Jr3ZIv5mVy0.svg)](https://asciinema.org/a/zLoB2E0NQJy2D6Jr3ZIv5mVy0)
 
-### Brain GCD game
+### Start Brain GCD game
 
 Find the greatest common divisor of given numbers.
 
-[![Start Brain GCD](https://asciinema.org/a/x8DkP9B4uQn1wTtmcEWz5Xcdi.svg)](https://asciinema.org/a/x8DkP9B4uQn1wTtmcEWz5Xcdi)
+[![Start Brain GCD game](https://asciinema.org/a/X8YLWRzUGnrAQGmAZMDQNk1p4.svg)](https://asciinema.org/a/X8YLWRzUGnrAQGmAZMDQNk1p4)
 
-### Brain Progression game
+### Start Brain Progression game
 
 What number is missing in the progression?
 
-[![Start Brain Progression](https://asciinema.org/a/gHR15h0clLLiHrDMoNG1hycgV.svg)](https://asciinema.org/a/gHR15h0clLLiHrDMoNG1hycgV)
+[![Start Brain Progression game](https://asciinema.org/a/e1B0ee8IufzP14loeSryx0HnU.svg)](https://asciinema.org/a/e1B0ee8IufzP14loeSryx0HnU)
 
-### Brain Prime game
+### Start Brain Prime game
 
 Answer "yes" if given number is prime. Otherwise answer "no".
 
-[![Start Brain Prime](https://asciinema.org/a/hJcox7gGw0S3BJMw1RrOVhl5a.svg)](https://asciinema.org/a/hJcox7gGw0S3BJMw1RrOVhl5a)
+[![Start Brain Prime game](https://asciinema.org/a/RvtSLWPJgNO9LdnA1SdjcyQCO.svg)](https://asciinema.org/a/RvtSLWPJgNO9LdnA1SdjcyQCO)
