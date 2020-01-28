@@ -24,9 +24,9 @@ const gameCalc = () => {
   const question = `${numberOne} ${expression} ${numberTwo}`;
 
   const correctAnswer = expressionFunction(numberOne, numberTwo);
-  const userAnswer = Number(requestAnswer(question));
+  const userAnswer = requestAnswer(question);
 
-  if (correctAnswer !== userAnswer) {
+  if (correctAnswer !== Number(userAnswer)) {
     return [userAnswer, correctAnswer];
   }
 
