@@ -2,11 +2,11 @@
 import startGame, {
   showGameRules, getUserName, sayHello, makeGame,
 } from '..';
-import gameEven from '../games/even';
+import gameCalc from '../games/calc';
 
 startGame();
 const userName = getUserName();
 sayHello(userName);
 
-showGameRules('Answer "yes" if the number is even, otherwise answer "no".');
-makeGame(gameEven, userName);
+showGameRules('What is the result of the expression?');
+makeGame(gameCalc, userName);
