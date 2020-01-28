@@ -14,7 +14,7 @@ const getExpressionFunction = (expression) => {
   }
 };
 
-const gameCalc = () => {
+export default () => {
   const expressions = ['+', '-', '*'];
   const numberOne = _.random(100);
   const numberTwo = _.random(100);
@@ -32,5 +32,3 @@ const gameCalc = () => {
 
   return true;
 };
-
-export default gameCalc;

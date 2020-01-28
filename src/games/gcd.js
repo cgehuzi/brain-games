@@ -1,7 +1,7 @@
 import * as _ from 'lodash';
 import { requestAnswer } from '..';
 
-const gameGCD = () => {
+export default () => {
   const numberOne = _.random(100);
   const numberTwo = _.random(100);
 
@@ -27,5 +27,3 @@ const gameGCD = () => {
 
   return true;
 };
-
-export default gameGCD;
