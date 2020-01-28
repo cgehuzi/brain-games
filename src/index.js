@@ -6,7 +6,7 @@ export const getUserName = (question) => {
 };
 
 export const sayHello = (userName) => {
-  console.log(`Hello, ${userName}!\n`);
+  console.log(`Hello, ${userName}!`);
 };
 
 export default (gameDesc) => {
