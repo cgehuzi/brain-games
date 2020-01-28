@@ -11,3 +11,7 @@
 ### Brain Even game
 
 [![Start Brain Even](https://asciinema.org/a/pqw3cTPpraRJ5bLSmDojV9Mi5.svg)](https://asciinema.org/a/pqw3cTPpraRJ5bLSmDojV9Mi5)
+
+### Brain Calc game
+
+[![Start Brain Calc](https://asciinema.org/a/slNDWlw5lQKBtDqYdcczjU02J.svg)](https://asciinema.org/a/slNDWlw5lQKBtDqYdcczjU02J)
