@@ -23,3 +23,9 @@ What is the result of the expression?
 Find the greatest common divisor of given numbers.
 
 [![Start Brain GCD](https://asciinema.org/a/x8DkP9B4uQn1wTtmcEWz5Xcdi.svg)](https://asciinema.org/a/x8DkP9B4uQn1wTtmcEWz5Xcdi)
+
+### Brain Progression game
+
+What number is missing in the progression?
+
+[![Start Brain Progression](https://asciinema.org/a/gHR15h0clLLiHrDMoNG1hycgV.svg)](https://asciinema.org/a/gHR15h0clLLiHrDMoNG1hycgV)
