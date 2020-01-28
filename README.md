@@ -6,4 +6,8 @@
 
 ### Install Brain Games
 
-[![asciicast](https://asciinema.org/a/58In28w1MkuXyxg1PDEy6xjkN.svg)](https://asciinema.org/a/58In28w1MkuXyxg1PDEy6xjkN)
+[![Install Brain Games](https://asciinema.org/a/58In28w1MkuXyxg1PDEy6xjkN.svg)](https://asciinema.org/a/58In28w1MkuXyxg1PDEy6xjkN)
+
+### Brain Even game
+
+[![Start Brain Even](https://asciinema.org/a/pqw3cTPpraRJ5bLSmDojV9Mi5.svg)](https://asciinema.org/a/pqw3cTPpraRJ5bLSmDojV9Mi5)
