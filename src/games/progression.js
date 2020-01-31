@@ -2,7 +2,9 @@ import * as _ from 'lodash';
 import { cons } from '@hexlet/pairs';
 import makeGame, { stepsCount } from '..';
 
-export default () => {
+const gameDesc = 'What number is missing in the progression?';
+
+export default (user) => {
   const conditions = [];
 
   for (let i = 1; i <= stepsCount; i += 1) {
@@ -26,5 +28,5 @@ export default () => {
     conditions.push(stepCondition);
   }
 
-  return makeGame('What number is missing in the progression?', conditions);
+  return !user ? makeGame(gameDesc, conditions) : makeGame(gameDesc, conditions, user);
 };

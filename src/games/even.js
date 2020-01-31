@@ -2,7 +2,9 @@ import * as _ from 'lodash';
 import { cons } from '@hexlet/pairs';
 import makeGame, { stepsCount } from '..';
 
-export default () => {
+const gameDesc = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+export default (user) => {
   const conditions = [];
 
   for (let i = 1; i <= stepsCount; i += 1) {
@@ -12,5 +14,5 @@ export default () => {
     conditions.push(stepCondition);
   }
 
-  return makeGame('Answer "yes" if the number is even, otherwise answer "no".', conditions);
+  return !user ? makeGame(gameDesc, conditions) : makeGame(gameDesc, conditions, user);
 };

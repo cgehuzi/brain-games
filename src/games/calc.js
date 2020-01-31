@@ -2,9 +2,10 @@ import * as _ from 'lodash';
 import { cons, car, cdr } from '@hexlet/pairs';
 import makeGame, { stepsCount } from '..';
 
+const gameDesc = 'What is the result of the expression?';
 const expressions = [cons('+', (a, b) => a + b), cons('-', (a, b) => a - b), cons('*', (a, b) => a * b)];
 
-export default () => {
+export default (user) => {
   const conditions = [];
 
   for (let i = 1; i <= stepsCount; i += 1) {
@@ -21,5 +22,5 @@ export default () => {
     conditions.push(stepCondition);
   }
 
-  return makeGame('What is the result of the expression?', conditions);
+  return !user ? makeGame(gameDesc, conditions) : makeGame(gameDesc, conditions, user);
 };
