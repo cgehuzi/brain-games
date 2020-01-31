@@ -36,6 +36,7 @@
   },
   "homepage": "https://github.com/cgehuzi/hexlet-frontend-1#readme",
   "dependencies": {
+    "@hexlet/pairs": "^1.0.10",
     "lodash": "^4.17.15",
     "readline-sync": "^1.4.10"
   },
