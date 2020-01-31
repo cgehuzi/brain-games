@@ -1,34 +1,25 @@
 import * as _ from 'lodash';
-import { requestAnswer } from '..';
+import { cons, car, cdr } from '@hexlet/pairs';
+import makeGame, { stepsCount } from '..';
 
-const getExpressionFunction = (expression) => {
-  switch (expression) {
-    case '+':
-      return (a, b) => a + b;
-    case '-':
-      return (a, b) => a - b;
-    case '*':
-      return (a, b) => a * b;
-    default:
-      return (a, b) => a + b;
-  }
-};
+const expressions = [cons('+', (a, b) => a + b), cons('-', (a, b) => a - b), cons('*', (a, b) => a * b)];
 
 export default () => {
-  const expressions = ['+', '-', '*'];
-  const numberOne = _.random(1, 100);
-  const numberTwo = _.random(1, 100);
-  const randomIndex = _.random(0, expressions.length - 1);
-  const expression = expressions[randomIndex];
-  const expressionFunction = getExpressionFunction(expression);
+  const conditions = [];
 
-  const question = `${numberOne} ${expression} ${numberTwo}`;
-  const correctAnswer = expressionFunction(numberOne, numberTwo);
-  const userAnswer = requestAnswer(question);
+  for (let i = 1; i <= stepsCount; i += 1) {
+    const numberOne = _.random(1, 100);
+    const numberTwo = _.random(1, 100);
+    const randomIndex = _.random(0, expressions.length - 1);
+    const expressionPair = expressions[randomIndex];
+    const expression = car(expressionPair);
+    const expressionFunction = cdr(expressionPair);
 
-  if (correctAnswer !== Number(userAnswer)) {
-    return [userAnswer, correctAnswer];
+    const question = `${numberOne} ${expression} ${numberTwo}`;
+    const answer = expressionFunction(numberOne, numberTwo);
+    const stepCondition = cons(question, answer);
+    conditions.push(stepCondition);
   }
 
-  return true;
+  return makeGame('What is the result of the expression?', conditions);
 };

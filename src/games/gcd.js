@@ -1,29 +1,31 @@
 import * as _ from 'lodash';
-import { requestAnswer } from '..';
+import { cons } from '@hexlet/pairs';
+import makeGame, { stepsCount } from '..';
 
 export default () => {
-  const numberOne = _.random(1, 100);
-  const numberTwo = _.random(1, 100);
+  const conditions = [];
 
-  const minNumber = Math.min(numberOne, numberTwo);
-  let grandDivisor = minNumber;
+  for (let i = 1; i <= stepsCount; i += 1) {
+    const numberOne = _.random(1, 100);
+    const numberTwo = _.random(1, 100);
 
-  for (let i = minNumber - 1; i > 0; i -= 1) {
-    const isDivisorOne = numberOne % i === 0;
-    const isDivisorTwo = numberTwo % i === 0;
-    if (isDivisorOne && isDivisorTwo) {
-      grandDivisor = i;
-      break;
+    const minNumber = Math.min(numberOne, numberTwo);
+    let grandDivisor = minNumber;
+
+    for (let j = minNumber - 1; j > 0; j -= 1) {
+      const isDivisorOne = numberOne % j === 0;
+      const isDivisorTwo = numberTwo % j === 0;
+      if (isDivisorOne && isDivisorTwo) {
+        grandDivisor = j;
+        break;
+      }
     }
+
+    const question = `${numberOne} ${numberTwo}`;
+    const answer = grandDivisor;
+    const stepCondition = cons(question, answer);
+    conditions.push(stepCondition);
   }
 
-  const question = `${numberOne} ${numberTwo}`;
-  const correctAnswer = grandDivisor;
-  const userAnswer = requestAnswer(question);
-
-  if (correctAnswer !== Number(userAnswer)) {
-    return [userAnswer, correctAnswer];
-  }
-
-  return true;
+  return makeGame('Find the greatest common divisor of given numbers.', conditions);
 };

@@ -1,31 +1,27 @@
 import readlineSync from 'readline-sync';
+import { car, cdr } from '@hexlet/pairs';
 
-const showGameRules = (rules) => {
-  console.log(rules);
-};
+export const stepsCount = 3;
 
-const getUserName = () => {
+export default (gameDesc = 'start', gameConditions = []) => {
+  console.log('Welcome to the Brain Games!');
   const user = readlineSync.question('May I have your name? ');
-  return user;
-};
-
-const sayHello = (user) => {
   console.log(`Hello, ${user}!`);
-};
 
-const requestAnswer = (question) => {
-  const answer = readlineSync.question(`Question: ${question}\nYour answer: `);
-  return answer;
-};
+  if (gameDesc === 'start') {
+    return true;
+  }
 
-const makeGame = (gameDesc, gameFunc, user, roundsCount = 3) => {
   console.log(gameDesc);
 
-  for (let i = roundsCount; i > 0; i -= 1) {
-    const result = gameFunc(user);
-    if (result !== true) {
-      const [userAnswer, correctAnswer] = result;
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+  for (let i = 0; i < gameConditions.length; i += 1) {
+    const condition = gameConditions[i];
+    const question = car(condition);
+    const answer = cdr(condition);
+    const userAnswer = readlineSync.question(`Question: ${question}\nYour answer: `);
+
+    if (userAnswer !== String(answer)) {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`);
       console.log(`Let's try again, ${user}!`);
       return false;
     }
@@ -35,35 +31,4 @@ const makeGame = (gameDesc, gameFunc, user, roundsCount = 3) => {
 
   console.log(`Congratulations, ${user}!`);
   return true;
-};
-
-/* Прежняя реализация (через рекурсию)
-=============================================================
-
-const makeGame = (gameFunction, user, stepCount = 3) => {
-  if (stepCount === 0) {
-    sayCongrats(user);
-    return true;
-  }
-
-  const result = gameFunction(user);
-
-  if (result !== true) {
-    const [userAnswer, correctAnswer] = result;
-    sayWrong(userAnswer, correctAnswer, user);
-    return false;
-  }
-
-  sayCorrect();
-  return makeGame(gameFunction, user, stepCount - 1);
-};
-
-============================================================= */
-
-export default () => {
-  console.log('Welcome to the Brain Games!');
-};
-
-export {
-  showGameRules, getUserName, sayHello, requestAnswer, makeGame,
 };
