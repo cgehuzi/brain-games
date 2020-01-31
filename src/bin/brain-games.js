@@ -1,6 +1,4 @@
 #!/usr/bin/env node
-import startGame, { getUserName, sayHello } from '..';
+import start from '..';
 
-startGame();
-const userName = getUserName();
-sayHello(userName);
+start();
