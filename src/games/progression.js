@@ -4,7 +4,7 @@ import makeGame, { stepsCount } from '..';
 
 const gameDesc = 'What number is missing in the progression?';
 
-export default (user) => {
+export default (user = false) => {
   const conditions = [];
 
   for (let i = 1; i <= stepsCount; i += 1) {
@@ -24,9 +24,9 @@ export default (user) => {
     progression[hideIndex] = '..';
 
     const question = progression.join(' ');
-    const stepCondition = cons(question, answer);
+    const stepCondition = cons(question, String(answer));
     conditions.push(stepCondition);
   }
 
-  return !user ? makeGame(gameDesc, conditions) : makeGame(gameDesc, conditions, user);
+  return makeGame(gameDesc, conditions, user);
 };

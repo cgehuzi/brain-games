@@ -5,7 +5,7 @@ import makeGame, { stepsCount } from '..';
 const gameDesc = 'What is the result of the expression?';
 const expressions = [cons('+', (a, b) => a + b), cons('-', (a, b) => a - b), cons('*', (a, b) => a * b)];
 
-export default (user) => {
+export default (user = false) => {
   const conditions = [];
 
   for (let i = 1; i <= stepsCount; i += 1) {
@@ -18,9 +18,9 @@ export default (user) => {
 
     const question = `${numberOne} ${expression} ${numberTwo}`;
     const answer = expressionFunction(numberOne, numberTwo);
-    const stepCondition = cons(question, answer);
+    const stepCondition = cons(question, String(answer));
     conditions.push(stepCondition);
   }
 
-  return !user ? makeGame(gameDesc, conditions) : makeGame(gameDesc, conditions, user);
+  return makeGame(gameDesc, conditions, user);
 };

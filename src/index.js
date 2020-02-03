@@ -10,7 +10,7 @@ export const getUserName = () => {
   return user;
 };
 
-export default (gameDesc, gameConditions, userName) => {
+export default (gameDesc, gameConditions, userName = false) => {
   const user = !userName ? getUserName() : userName;
 
   console.log(gameDesc);
@@ -19,9 +19,11 @@ export default (gameDesc, gameConditions, userName) => {
     const condition = gameConditions[i];
     const question = car(condition);
     const answer = cdr(condition);
-    const userAnswer = readlineSync.question(`Question: ${question}\nYour answer: `);
 
-    if (userAnswer !== String(answer)) {
+    console.log(`Question: ${question}`);
+    const userAnswer = readlineSync.question('Your answer: ');
+
+    if (userAnswer !== answer) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`);
       console.log(`Let's try again, ${user}!`);
       return false;
