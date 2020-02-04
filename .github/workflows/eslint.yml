@@ -1,4 +1,4 @@
-name: ESLint
+name: 'ESLint : airbnb-base'
 
 on:
   - push
@@ -21,8 +21,5 @@ jobs:
 
       - name: lint package
         run: |
-          make install
-          make lint
-
-        env:
-          CI: true
+          npm install
+          npx eslint .
