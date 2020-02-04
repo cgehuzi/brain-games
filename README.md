@@ -2,9 +2,21 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/c3ca2f1defad054eab0f/maintainability)](https://codeclimate.com/github/cgehuzi/hexlet-frontend-1/maintainability) ![ESLint : airbnb-base](https://github.com/cgehuzi/hexlet-frontend-1/workflows/ESLint%20:%20airbnb-base/badge.svg)
 
-## Getting started
+Набор математических мини-игр, запускаемых из консоли:
 
-Install Brain Games
+- [brain-even](#brain-even) – чётное ли число?
+- [brain-calc](#brain-calc) – калькулятор
+- [brain-gcd](#brain-gcd) – наибольший общий делитель
+- [brain-progression](#brain-progression) – арифметическая прогрессия
+- [brain-prime](#brain-prime) – простое ли число?
+
+Чтобы победить, игроку необходимо правильно ответить на три вопроса. При неверном ответе игра завершается.
+
+## Установка
+
+```bash
+npm install cgehuzi-hexlet-brain-games --global
+```
 
 [![Install Brain Games](https://asciinema.org/a/xnVNYtgO2FtRlv5oBFrx9bbNA.svg)](https://asciinema.org/a/xnVNYtgO2FtRlv5oBFrx9bbNA)
 
