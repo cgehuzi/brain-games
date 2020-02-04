@@ -1,6 +1,6 @@
 # Brain Games for command line
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/c3ca2f1defad054eab0f/maintainability)](https://codeclimate.com/github/cgehuzi/hexlet-frontend-1/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/c3ca2f1defad054eab0f/maintainability)](https://codeclimate.com/github/cgehuzi/hexlet-frontend-1/maintainability) ![ESLint : airbnb-base](https://github.com/cgehuzi/hexlet-frontend-1/workflows/ESLint%20:%20airbnb-base/badge.svg)
 
 ## Getting started
 
