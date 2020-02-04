@@ -1,37 +1,33 @@
 import readlineSync from 'readline-sync';
 import { car, cdr } from '@hexlet/pairs';
 
-export const stepsCount = 3;
+export const gameStepsCount = 3;
 
-export const getUserName = () => {
+export default (gameDescription, gameConditions) => {
   console.log('Welcome to the Brain Games!');
-  const user = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${user}!`);
-  return user;
-};
 
-export default (gameDesc, gameConditions, userName = false) => {
-  const user = !userName ? getUserName() : userName;
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!`);
 
-  console.log(gameDesc);
+  console.log(gameDescription);
 
   for (let i = 0; i < gameConditions.length; i += 1) {
     const condition = gameConditions[i];
     const question = car(condition);
-    const answer = cdr(condition);
+    const correctAnswer = cdr(condition);
 
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
-    if (userAnswer !== answer) {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`);
-      console.log(`Let's try again, ${user}!`);
+    if (userAnswer !== correctAnswer) {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(`Let's try again, ${userName}!`);
       return false;
     }
 
     console.log('Correct!');
   }
 
-  console.log(`Congratulations, ${user}!`);
+  console.log(`Congratulations, ${userName}!`);
   return true;
 };

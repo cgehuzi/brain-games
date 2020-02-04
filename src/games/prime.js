@@ -1,9 +1,12 @@
 import * as _ from 'lodash';
 import { cons } from '@hexlet/pairs';
-import makeGame, { stepsCount } from '..';
+import makeGame, { gameStepsCount } from '..';
 
-const gameDesc = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const isPrime = (number) => {
+  if (number <= 1) {
+    return false;
+  }
   for (let i = 2; i <= number / 2; i += 1) {
     if (number % i === 0) {
       return false;
@@ -12,15 +15,16 @@ const isPrime = (number) => {
   return true;
 };
 
-export default (user = false) => {
-  const conditions = [];
+export default () => {
+  const gameConditions = [];
 
-  for (let i = 1; i <= stepsCount; i += 1) {
+  for (let i = 1; i <= gameStepsCount; i += 1) {
     const question = _.random(1, 100);
     const answer = isPrime(question) ? 'yes' : 'no';
-    const stepCondition = cons(question, answer);
-    conditions.push(stepCondition);
+    const condition = cons(question, answer);
+
+    gameConditions.push(condition);
   }
 
-  return makeGame(gameDesc, conditions, user);
+  return makeGame(gameDescription, gameConditions);
 };

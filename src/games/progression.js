@@ -1,32 +1,37 @@
 import * as _ from 'lodash';
 import { cons } from '@hexlet/pairs';
-import makeGame, { stepsCount } from '..';
+import makeGame, { gameStepsCount } from '..';
 
-const gameDesc = 'What number is missing in the progression?';
+const gameDescription = 'What number is missing in the progression?';
+const makeProgression = (start, step, length = 10) => {
+  const progression = [];
 
-export default (user = false) => {
-  const conditions = [];
-
-  for (let i = 1; i <= stepsCount; i += 1) {
-    const progressionStart = _.random(1, 10);
-    const progressionStep = _.random(1, 10);
-    const progressionLength = 10;
-
-    const progression = [progressionStart];
-    for (let j = 1; j < progressionLength; j += 1) {
-      const progressionLast = progression[progression.length - 1];
-      const progressionNext = progressionLast + progressionStep;
-      progression.push(progressionNext);
-    }
-
-    const hideIndex = _.random(0, progressionLength - 1);
-    const answer = progression[hideIndex];
-    progression[hideIndex] = '..';
-
-    const question = progression.join(' ');
-    const stepCondition = cons(question, String(answer));
-    conditions.push(stepCondition);
+  for (let i = 0; i < length; i += 1) {
+    const stepNumber = start + step * i;
+    progression.push(stepNumber);
   }
 
-  return makeGame(gameDesc, conditions, user);
+  return progression;
+};
+
+export default () => {
+  const gameConditions = [];
+
+  for (let i = 1; i <= gameStepsCount; i += 1) {
+    const progressionStart = _.random(1, 10);
+    const progressionStep = _.random(1, 10);
+    const progression = makeProgression(progressionStart, progressionStep);
+
+    const hiddenProgressionIndex = _.random(0, progression.length - 1);
+    const hiddenProgressionNumber = progression[hiddenProgressionIndex];
+    progression[hiddenProgressionIndex] = '..';
+
+    const question = progression.join(' ');
+    const answer = hiddenProgressionNumber;
+    const condition = cons(question, String(answer));
+
+    gameConditions.push(condition);
+  }
+
+  return makeGame(gameDescription, gameConditions);
 };

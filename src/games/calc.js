@@ -1,26 +1,27 @@
 import * as _ from 'lodash';
 import { cons, car, cdr } from '@hexlet/pairs';
-import makeGame, { stepsCount } from '..';
+import makeGame, { gameStepsCount } from '..';
 
-const gameDesc = 'What is the result of the expression?';
-const expressions = [cons('+', (a, b) => a + b), cons('-', (a, b) => a - b), cons('*', (a, b) => a * b)];
+const gameDescription = 'What is the result of the expression?';
+const gameExpressions = [cons('+', (a, b) => a + b), cons('-', (a, b) => a - b), cons('*', (a, b) => a * b)];
 
-export default (user = false) => {
-  const conditions = [];
+export default () => {
+  const gameConditions = [];
 
-  for (let i = 1; i <= stepsCount; i += 1) {
-    const numberOne = _.random(1, 100);
-    const numberTwo = _.random(1, 100);
-    const randomIndex = _.random(0, expressions.length - 1);
-    const expressionPair = expressions[randomIndex];
-    const expression = car(expressionPair);
-    const expressionFunction = cdr(expressionPair);
+  for (let i = 1; i <= gameStepsCount; i += 1) {
+    const firstNumber = _.random(1, 100);
+    const secondNumber = _.random(1, 100);
+    const randomExpressionIndex = _.random(0, gameExpressions.length - 1);
+    const expression = gameExpressions[randomExpressionIndex];
+    const expressionSymbol = car(expression);
+    const expressionFunction = cdr(expression);
 
-    const question = `${numberOne} ${expression} ${numberTwo}`;
-    const answer = expressionFunction(numberOne, numberTwo);
-    const stepCondition = cons(question, String(answer));
-    conditions.push(stepCondition);
+    const question = `${firstNumber} ${expressionSymbol} ${secondNumber}`;
+    const answer = expressionFunction(firstNumber, secondNumber);
+    const condition = cons(question, String(answer));
+
+    gameConditions.push(condition);
   }
 
-  return makeGame(gameDesc, conditions, user);
+  return makeGame(gameDescription, gameConditions);
 };
