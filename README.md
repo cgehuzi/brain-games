@@ -4,54 +4,83 @@
 
 Набор математических мини-игр, запускаемых из консоли:
 
-- [brain-even](#brain-even) – чётное ли число?
-- [brain-calc](#brain-calc) – калькулятор
-- [brain-gcd](#brain-gcd) – наибольший общий делитель
-- [brain-progression](#brain-progression) – арифметическая прогрессия
-- [brain-prime](#brain-prime) – простое ли число?
+- [brain-even](#чётное-ли-число) – чётное ли число
+- [brain-calc](#калькулятор) – калькулятор
+- [brain-gcd](#наибольший-общий-делитель) – наибольший общий делитель
+- [brain-progression](#арифметическая-прогрессия) – арифметическая прогрессия
+- [brain-prime](#простое-ли-число) – простое ли число
 
 Чтобы победить, игроку необходимо правильно ответить на три вопроса. При неверном ответе игра завершается.
 
 ## Установка
 
 ```bash
-npm install cgehuzi-hexlet-brain-games --global
+npm install cgehuzi-brain-games --global
 ```
 
-[![Install Brain Games](https://asciinema.org/a/xnVNYtgO2FtRlv5oBFrx9bbNA.svg)](https://asciinema.org/a/xnVNYtgO2FtRlv5oBFrx9bbNA)
+## Запуск игр
 
-### Start Brain Games
+### Чётное ли число
 
-Choose game and have fun! =)
+Будет предложено число. Нужно определить, чётное ли оно.
 
-[![Start Brain Games](https://asciinema.org/a/uUnRpeFwUQac6usYcLCbBwim1.svg)](https://asciinema.org/a/uUnRpeFwUQac6usYcLCbBwim1)
+```bash
+$ brain-even
 
-#### Start Brain Even game
+# Answer "yes" if the number is even, otherwise answer "no".
+# Question: 42
+# Your answer: yes
+# Correct!
+```
 
-Answer "yes" if the number is even, otherwise answer "no".
+### Калькулятор
 
-[![Start Brain Even game](https://asciinema.org/a/3gxTMgyghmY2OQC9rbzWYK29J.svg)](https://asciinema.org/a/3gxTMgyghmY2OQC9rbzWYK29J)
+Будет предложено математическое выражение (сложение, вычитание или умножение). Нужно определить его результат.
 
-#### Start Brain Calc game
+```bash
+$ brain-calc
 
-What is the result of the expression?
+# What is the result of the expression?
+# Question: 86 + 22
+# Your answer: 108
+# Correct!
+```
 
-[![Start Brain Calc game](https://asciinema.org/a/zLoB2E0NQJy2D6Jr3ZIv5mVy0.svg)](https://asciinema.org/a/zLoB2E0NQJy2D6Jr3ZIv5mVy0)
+### Наибольший общий делитель
 
-#### Start Brain GCD game
+Будет предложено два числа. Нужно определить их наибольший общий делитель.
 
-Find the greatest common divisor of given numbers.
+```bash
+$ brain-gcd
 
-[![Start Brain GCD game](https://asciinema.org/a/X8YLWRzUGnrAQGmAZMDQNk1p4.svg)](https://asciinema.org/a/X8YLWRzUGnrAQGmAZMDQNk1p4)
+# Find the greatest common divisor of given numbers.
+# Question: 25 70
+# Your answer: 5
+# Correct!
+```
 
-#### Start Brain Progression game
+### Арифметическая прогрессия
 
-What number is missing in the progression?
+Будет предложена арифметическая прогрессия, но один из её членов будет неизвестен. Нужно определить недостающее число.
 
-[![Start Brain Progression game](https://asciinema.org/a/e1B0ee8IufzP14loeSryx0HnU.svg)](https://asciinema.org/a/e1B0ee8IufzP14loeSryx0HnU)
+```bash
+$ brain-progression
 
-#### Start Brain Prime game
+# What number is missing in the progression?
+# Question: 6 14 22 30 38 46 54 62 .. 78
+# Your answer: 70
+# Correct!
+```
 
-Answer "yes" if given number is prime. Otherwise answer "no".
+### Простое ли число
 
-[![Start Brain Prime game](https://asciinema.org/a/RvtSLWPJgNO9LdnA1SdjcyQCO.svg)](https://asciinema.org/a/RvtSLWPJgNO9LdnA1SdjcyQCO)
+Будет предложено число. Нужно определить, [простое](https://ru.wikipedia.org/wiki/Простое_число) ли оно.
+
+```bash
+$ brain-prime
+
+# Answer "yes" if given number is prime. Otherwise answer "no".
+# Question: 83
+# Your answer: yes
+# Correct!
+```

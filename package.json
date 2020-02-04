@@ -1,5 +1,5 @@
 {
-  "name": "cgehuzi-hexlet-brain-games",
+  "name": "cgehuzi-brain-games",
   "version": "1.0.0",
   "description": "Brain Games for command line",
   "main": "dist/index.js",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cgehuzi/hexlet-brain-games.git"
+    "url": "git+https://github.com/cgehuzi/brain-games.git"
   },
   "keywords": [
     "hexlet",
@@ -31,9 +31,9 @@
   "author": "cgehuzi <mail.cgehuzi@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cgehuzi/hexlet-brain-games/issues"
+    "url": "https://github.com/cgehuzi/brain-games/issues"
   },
-  "homepage": "https://github.com/cgehuzi/hexlet-brain-games#readme",
+  "homepage": "https://github.com/cgehuzi/brain-games#readme",
   "dependencies": {
     "@hexlet/pairs": "^1.0.10",
     "lodash": "^4.17.15",
