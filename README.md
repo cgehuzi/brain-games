@@ -2,6 +2,10 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/4ad737a24d79d747d5a9/maintainability)](https://codeclimate.com/github/cgehuzi/brain-games/maintainability) ![ESLint : airbnb-base](https://github.com/cgehuzi/brain-games/workflows/ESLint%20:%20airbnb-base/badge.svg)
 
+Создано в рамках учебного проекта [Игры Разума](https://ru.hexlet.io/professions/frontend/projects/44) от Хекслет.
+
+## Описание
+
 Набор математических мини-игр, запускаемых из консоли:
 
 - [brain-even](#чётное-ли-число) – чётное ли число
