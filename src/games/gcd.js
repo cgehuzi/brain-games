@@ -19,7 +19,7 @@ const getGrandDivisor = (number1, number2) => {
   return grandDivisor;
 };
 
-export default () => {
+export default (user = false) => {
   const gameConditions = [];
 
   for (let i = 1; i <= gameStepsCount; i += 1) {
@@ -34,5 +34,5 @@ export default () => {
     gameConditions.push(condition);
   }
 
-  return makeGame(gameDescription, gameConditions);
+  return makeGame(gameDescription, gameConditions, user);
 };

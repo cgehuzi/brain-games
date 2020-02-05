@@ -4,7 +4,7 @@ import makeGame, { gameStepsCount } from '..';
 
 const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-export default () => {
+export default (user = false) => {
   const gameConditions = [];
 
   for (let i = 1; i <= gameStepsCount; i += 1) {
@@ -15,5 +15,5 @@ export default () => {
     gameConditions.push(condition);
   }
 
-  return makeGame(gameDescription, gameConditions);
+  return makeGame(gameDescription, gameConditions, user);
 };

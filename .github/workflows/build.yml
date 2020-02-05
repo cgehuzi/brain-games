@@ -1,4 +1,4 @@
-name: 'ESLint : airbnb-base'
+name: 'build'
 
 on:
   - push
@@ -19,7 +19,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - name: install package
+        run: npm install
+
+      - name: build package
+        run: npm run build
+
       - name: lint package
-        run: |
-          npm install
-          npx eslint .
+        run: npx eslint .

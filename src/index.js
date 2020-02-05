@@ -3,11 +3,14 @@ import { car, cdr } from '@hexlet/pairs';
 
 export const gameStepsCount = 3;
 
-export default (gameDescription, gameConditions) => {
-  console.log('Welcome to the Brain Games!');
+export default (gameDescription, gameConditions, user) => {
+  let userName = user;
 
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
+  if (!user) {
+    console.log('Welcome to the Brain Games!');
+    userName = readlineSync.question('May I have your name? ');
+    console.log(`Hello, ${userName}!`);
+  }
 
   console.log(gameDescription);
 
