@@ -1,6 +1,6 @@
 # Brain Games for command line
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/4ad737a24d79d747d5a9/maintainability)](https://codeclimate.com/github/cgehuzi/brain-games/maintainability) ![ESLint : airbnb-base](https://github.com/cgehuzi/hexlet-frontend-1/workflows/ESLint%20:%20airbnb-base/badge.svg)
+[![Maintainability](https://api.codeclimate.com/v1/badges/4ad737a24d79d747d5a9/maintainability)](https://codeclimate.com/github/cgehuzi/brain-games/maintainability) ![ESLint : airbnb-base](https://github.com/cgehuzi/brain-games/workflows/ESLint%20:%20airbnb-base/badge.svg)
 
 Набор математических мини-игр, запускаемых из консоли:
 
