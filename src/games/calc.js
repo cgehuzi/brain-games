@@ -11,13 +11,13 @@ export default (user = false) => {
   for (let i = 1; i <= gameStepsCount; i += 1) {
     const firstNumber = _.random(1, 100);
     const secondNumber = _.random(1, 100);
-    const randomExpressionIndex = _.random(0, gameExpressions.length - 1);
-    const expression = gameExpressions[randomExpressionIndex];
-    const expressionSymbol = car(expression);
-    const expressionFunction = cdr(expression);
+    const randomIndex = _.random(0, gameExpressions.length - 1);
+    const expression = gameExpressions[randomIndex];
+    const sign = car(expression);
+    const operation = cdr(expression);
 
-    const question = `${firstNumber} ${expressionSymbol} ${secondNumber}`;
-    const answer = expressionFunction(firstNumber, secondNumber);
+    const question = `${firstNumber} ${sign} ${secondNumber}`;
+    const answer = operation(firstNumber, secondNumber);
     const condition = cons(question, String(answer));
 
     gameConditions.push(condition);

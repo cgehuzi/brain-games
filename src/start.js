@@ -33,6 +33,7 @@ const startGameOfTheList = (alias, games) => {
       return gameFunction;
     }
   }
+
   return (user) => {
     console.log('Sorry, this game not found ;(.');
     console.log(`Let's try again, ${user}!`);
@@ -41,7 +42,6 @@ const startGameOfTheList = (alias, games) => {
 
 export default () => {
   console.log('Welcome to the Brain Games!');
-
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
 
