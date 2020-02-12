@@ -1,6 +1,6 @@
-import * as _ from 'lodash';
-import { cons } from '@hexlet/pairs';
-import makeGame, { gameStepsCount } from '..';
+import _ from 'lodash';
+import pairs from '@hexlet/pairs';
+import makeGame, { gameStepsCount } from '../index.js';
 
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 const getGrandDivisor = (number1, number2) => {
@@ -29,7 +29,7 @@ export default (user = false) => {
 
     const question = `${firstNumber} ${secondNumber}`;
     const answer = grandDivisor;
-    const condition = cons(question, String(answer));
+    const condition = pairs.cons(question, String(answer));
 
     gameConditions.push(condition);
   }

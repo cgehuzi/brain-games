@@ -1,6 +1,6 @@
 {
   "extends": ["eslint:recommended", "airbnb-base"],
-  "plugins": ["import", "babel"],
+  "plugins": ["import"],
   "env": {
     "es6": true,
     "node": true
@@ -12,8 +12,9 @@
       "impliedStrict": true
     }
   },
-  "ignorePatterns": ["node_modules", "dist"],
+  "ignorePatterns": ["node_modules"],
   "rules": {
-    "no-console": 0
+    "no-console": 0,
+    "import/extensions": 0
   }
 }

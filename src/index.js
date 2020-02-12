@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { car, cdr } from '@hexlet/pairs';
+import pairs from '@hexlet/pairs';
 
 export const gameStepsCount = 3;
 
@@ -16,8 +16,8 @@ export default (gameDescription, gameConditions, user) => {
 
   for (let i = 0; i < gameConditions.length; i += 1) {
     const condition = gameConditions[i];
-    const question = car(condition);
-    const correctAnswer = cdr(condition);
+    const question = pairs.car(condition);
+    const correctAnswer = pairs.cdr(condition);
 
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');

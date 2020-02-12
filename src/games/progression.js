@@ -1,6 +1,6 @@
-import * as _ from 'lodash';
-import { cons } from '@hexlet/pairs';
-import makeGame, { gameStepsCount } from '..';
+import _ from 'lodash';
+import pairs from '@hexlet/pairs';
+import makeGame, { gameStepsCount } from '../index.js';
 
 const gameDescription = 'What number is missing in the progression?';
 const makeProgression = (start, step, length = 10) => {
@@ -28,7 +28,7 @@ export default (user = false) => {
 
     const question = progression.join(' ');
     const answer = hiddenProgressionNumber;
-    const condition = cons(question, String(answer));
+    const condition = pairs.cons(question, String(answer));
 
     gameConditions.push(condition);
   }

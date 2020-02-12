@@ -1,24 +1,24 @@
 import readlineSync from 'readline-sync';
-import { cons, car, cdr } from '@hexlet/pairs';
-import startEven from './games/even';
-import startCalc from './games/calc';
-import startGcd from './games/gcd';
-import startProgression from './games/progression';
-import startPrime from './games/prime';
+import pairs from '@hexlet/pairs';
+import startEven from './games/even.js';
+import startCalc from './games/calc.js';
+import startGcd from './games/gcd.js';
+import startProgression from './games/progression.js';
+import startPrime from './games/prime.js';
 
 const brainGames = [
-  cons(cons('1', 'brain-even'), startEven),
-  cons(cons('2', 'brain-calc'), startCalc),
-  cons(cons('3', 'brain-gcd'), startGcd),
-  cons(cons('4', 'brain-progression'), startProgression),
-  cons(cons('5', 'brain-prime'), startPrime),
+  pairs.cons(pairs.cons('1', 'even'), startEven),
+  pairs.cons(pairs.cons('2', 'calc'), startCalc),
+  pairs.cons(pairs.cons('3', 'gcd'), startGcd),
+  pairs.cons(pairs.cons('4', 'progression'), startProgression),
+  pairs.cons(pairs.cons('5', 'prime'), startPrime),
 ];
 
 const showGamesList = (games) => {
   for (let i = 0; i < games.length; i += 1) {
     const game = games[i];
-    const gameNumber = car(car(game));
-    const gameName = cdr(car(game));
+    const gameNumber = pairs.car(pairs.car(game));
+    const gameName = pairs.cdr(pairs.car(game));
     console.log(`${gameNumber} : ${gameName}`);
   }
 };
@@ -26,9 +26,9 @@ const showGamesList = (games) => {
 const startGameOfTheList = (alias, games) => {
   for (let i = 0; i < games.length; i += 1) {
     const game = games[i];
-    const gameNumber = car(car(game));
-    const gameName = cdr(car(game));
-    const gameFunction = cdr(game);
+    const gameNumber = pairs.car(pairs.car(game));
+    const gameName = pairs.cdr(pairs.car(game));
+    const gameFunction = pairs.cdr(game);
     if (alias === gameNumber || alias === gameName) {
       return gameFunction;
     }
