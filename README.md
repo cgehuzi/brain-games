@@ -1,6 +1,6 @@
 # Brain Games for command line
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/4ad737a24d79d747d5a9/maintainability)](https://codeclimate.com/github/cgehuzi/brain-games/maintainability) ![build](https://github.com/cgehuzi/brain-games/workflows/build/badge.svg)
+[![Maintainability](https://api.codeclimate.com/v1/badges/4ad737a24d79d747d5a9/maintainability)](https://codeclimate.com/github/cgehuzi/brain-games/maintainability) ![lint](https://github.com/cgehuzi/brain-games/workflows/lint/badge.svg)
 
 Создано в рамках учебного проекта [Игры Разума](https://ru.hexlet.io/professions/frontend/projects/44) от [Хекслет](https://ru.hexlet.io/).
 
@@ -8,6 +8,10 @@
 
 Набор математических мини-игр, запускаемых из консоли.  
 Чтобы победить, игроку необходимо правильно ответить на три вопроса. При неверном ответе игра завершается.
+
+## Требования
+
+> Node.js : ^13.0.0
 
 ## Установка
 

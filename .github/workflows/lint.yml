@@ -1,4 +1,4 @@
-name: 'build'
+name: 'lint'
 
 on:
   - push
@@ -21,9 +21,6 @@ jobs:
 
       - name: install package
         run: npm install
-
-      - name: build package
-        run: npm run build
 
       - name: lint package
         run: npx eslint .
